@@ -41,7 +41,19 @@ class Contato{
     }
 
     function chkUserPass($email, $senha){
+        $sql = "SELECT * FROM usuarios WHERE email = :e AND senha = :s";
 
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindValue(':e', $email);
+        $stmt->bindValue(':s', $senha);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return $stmt->fetch();
+        }else{
+            return array();
+        }
     }
 
     function insertUser($nome, $email, $senha){

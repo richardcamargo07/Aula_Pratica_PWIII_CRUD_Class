@@ -21,7 +21,7 @@ if (!$conecta) {
     // váriaveis locais
     if (isset($_POST['btnEntrar'])) {
 
-
+        // Teste unitario
         // echo "Nome $nome, Email $email, Senha $senha";
 
         // Autentica os campos com o banco de dados
@@ -32,11 +32,15 @@ if (!$conecta) {
                 $_SESSION['nome'] = $user['nome'];
                 header('location: pagina2.php');
             } else {
-                echo "Usuário ou Senha incorretos";
+                echo "<script>
+                            alert('Usuário ou Senha incorretos')
+                    </script>";
                 exit;
             }
         } else {
-            echo "Usuário não encontrado";
+            echo "<script>
+                        alert('Usuário não encontrado')
+                </script>";
         }
     } else {
         if (isset($_POST['btnCadastrar'])) {
@@ -45,7 +49,6 @@ if (!$conecta) {
                 echo "E-mail já cadastrado";
             } else {
                 $contato->insertUser($nome, $email, $senha);
-                
             }
         }
     }

@@ -144,4 +144,12 @@ class Contato
 
         return $stmt->execute();
     }
+
+    public function getAll(){
+        $sql = "SELECT * FROM usuarios";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
 }

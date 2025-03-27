@@ -7,7 +7,11 @@ $contato = new Contato();
 <table>
     <tr>
         <th>ID</th>
+<<<<<<< HEAD
         <th>Name</th>
+=======
+        <th>Nome</th>
+>>>>>>> 50308180b32b4ae81450ceefcf289e8995dec699
         <th>Email</th>
         <th>Ações</th>
     </tr>

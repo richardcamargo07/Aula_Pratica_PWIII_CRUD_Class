@@ -62,33 +62,36 @@ class Contato
 
     public function deletar($id)
     {
-        $sql = "DELETE FROM contato WHERE id = :id";
+        $sql = "DELETE FROM usuarios WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':id', $id);
         $stmt->execute();
 
         // Retorna verdadeiro se o registro foi deletado com sucesso e falso caso não
-        if ($stmt->rowCount() > 0) {
+        /*if ($stmt->rowCount() > 0) {
             return true;
         } else {
             return false;
-        }
+        }*/
+
+        return $stmt->rowCount() > 0;
     }
 
-    public function atualizar($id, $nome, $email, $senha)
+    public function editar($id, $nome, $email, $senha)
     {
-        $sql = "UPDATE contato SET nome = :n, email = :e, senha = :s WHERE id = :i";
+        $sql = "UPDATE usuarios SET nome = :n, email = :e, senha = :s WHERE id = :i";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':i', $id);
         $stmt->bindValue(':n', $nome);
         $stmt->bindValue(':e', $email);
         $stmt->bindValue(':s', $senha);
         $stmt->execute();
+        
 
         if ($stmt->rowCount() > 0) {
-            return true;
+            return $stmt->fetch();
         } else {
-            return false;
+            return array();
         }
     }
 
@@ -108,9 +111,12 @@ class Contato
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
-            return true;
+            $info = $stmt->fetch();
+            return $info;
+           
         } else {
-            return false;
+            $info = array();
+            return $info;
         }
     }
 
@@ -218,33 +224,36 @@ class Contato
 
     public function deletar($id)
     {
-        $sql = "DELETE FROM contato WHERE id = :id";
+        $sql = "DELETE FROM usuarios WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':id', $id);
         $stmt->execute();
 
         // Retorna verdadeiro se o registro foi deletado com sucesso e falso caso não
-        if ($stmt->rowCount() > 0) {
+        /*if ($stmt->rowCount() > 0) {
             return true;
         } else {
             return false;
-        }
+        }*/
+
+        return $stmt->rowCount() > 0;
     }
 
-    public function atualizar($id, $nome, $email, $senha)
+    public function editar($id, $nome, $email, $senha)
     {
-        $sql = "UPDATE contato SET nome = :n, email = :e, senha = :s WHERE id = :i";
+        $sql = "UPDATE usuarios SET nome = :n, email = :e, senha = :s WHERE id = :i";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':i', $id);
         $stmt->bindValue(':n', $nome);
         $stmt->bindValue(':e', $email);
         $stmt->bindValue(':s', $senha);
         $stmt->execute();
+        
 
         if ($stmt->rowCount() > 0) {
-            return true;
+            return $stmt->fetch();
         } else {
-            return false;
+            return array();
         }
     }
 
@@ -264,9 +273,12 @@ class Contato
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
-            return true;
+            $info = $stmt->fetch();
+            return $info;
+           
         } else {
-            return false;
+            $info = array();
+            return $info;
         }
     }
 

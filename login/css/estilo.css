@@ -67,6 +67,15 @@ button{
 .cadastrar:hover{
     background-color: #fa8072;
     border: 1px solid red;
+}
+.alterar  {
+    background-color: red;
+}
+
+
+.alterar:hover{
+    background-color: #fa8072;
+    border: 1px solid red;
 =======
 *{
     margin: 0;
@@ -134,6 +143,15 @@ button{
 }
 
 .cadastrar:hover{
+    background-color: #fa8072;
+    border: 1px solid red;
+}
+.alterar  {
+    background-color: red;
+}
+
+
+.alterar:hover{
     background-color: #fa8072;
     border: 1px solid red;
 >>>>>>> 50308180b32b4ae81450ceefcf289e8995dec699

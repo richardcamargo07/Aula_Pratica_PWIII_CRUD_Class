@@ -7,6 +7,7 @@ $contato = new Contato();
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/contatos.css">
 </head>
 <body>
 <div class="container mt-5">

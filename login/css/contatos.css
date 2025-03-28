@@ -1,0 +1,33 @@
+/* Estilos para a página contatos.php */
+
+body {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+.container {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+h2 {
+    color: #343a40; /* Cor do título */
+    font-size: 2rem; /* Tamanho da fonte do título */
+    text-align: center; /* Centralizar o título */
+}
+
+.table {
+    margin-top: 20px; /* Espaçamento superior da tabela */
+}
+
+.table th {
+    background-color: #007bff; /* Cor de fundo dos cabeçalhos */
+    color: white; /* Cor do texto dos cabeçalhos */
+}
+
+.table tr:hover {
+    background-color: #e9ecef; /* Efeito de hover nas linhas da tabela */
+}
+
+.btn {
+    border-radius: 5px; /* Bordas arredondadas para os botões */
+    padding: 10px 15px; /* Preenchimento dos botões */
+}
